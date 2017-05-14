@@ -5,3 +5,14 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+50.times do |n|
+  Faker::Config.locale = :ja
+  title = Faker::Name.name
+  content = Faker::Lorem.sentence
+  Blog.create!(title: title,
+               content:content,
+               )
+ Poem.create!(title: title,
+              content:content,
+              )
+end
